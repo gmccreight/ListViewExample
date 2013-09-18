@@ -42,7 +42,12 @@ public class ItemsAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View v = convertView;
 
-        //Log.d(TAG, convertView.toString());
+        if (v == null) {
+            Log.d(TAG, "is null");
+        }
+        else {
+            Log.d(TAG, "is not null");
+        }
 
 		if (v == null) {
 			LayoutInflater vi = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
